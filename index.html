@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Главная</title>
+</head>
+<body class="d-flex flex-column h-100">
+<div class="wrapper">
+    <header class="header__container">
+        <div class="header__content">
+            <div class="header__content-wrapper container">
+                <div class="header__logo-institute-img">
+                    <img src="img/header/logo_institut.png" alt="" class="header__logo-institute-img">
+                </div>
+                <div class="header__logo-institute-title">
+                    ФБУН Центральный НИИ Эпидемиологии Роспотребнадзора
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main id="main" class="flex-shrink-0" role="main">
+        <div class="container">
+
+            <div class="form__wrapper">
+                <div class="form__title">
+                    Расчет к какой волне активности COVID относится пациент
+                </div>
+                <div id="today" class="form__subtitle">1</div>
+                <div class="form__title">
+                    Номер пациента
+                </div>
+                <div id="pacient" class="form__subtitle"></div>
+                <div id="first_level" class="questionnaire__wrapper questionnaire__wrapper_active">
+
+                    <div  class="questionnaire">
+
+                        <div class="questionnaire__title">РАСЧЕТ </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Возраст пациента, полных лет</div>
+                            <div class="question__answer">
+                                <input id="age" class="value" placeholder="Введите возраст"></input>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Пол</div>
+                            <div class="question__answer">
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="sex_ans1" name="sex" value="male">
+                                    <label for="sex_ans1">М</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="sex_ans2" name="sex" value="female">
+                                    <label for="sex_ans2">Ж</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Эпид. анамнез</div>
+                            <div class="question__answer">
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="anamnes_ans1" name="anamnes" value="1">
+                                    <label for="anamnes_ans1">Наличие контакта</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="anamnes_ans2" name="anamnes" value="0">
+                                    <label for="anamnes_ans2">Отсутствие контакта</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Длительность заболевания на момент поступления в стационар</div>
+                            <div class="question__answer">
+                                <input id="day" class="value" placeholder="Введите длительность"></input>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Клиническая форма заболевания</div>
+                            <div class="question__answer">
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="clinic_ans1" name="clinic" value="orvi">
+                                    <label for="clinic_ans1">ОРВИ</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="clinic_ans2" name="clinic" value="pnevm_DN">
+                                    <label for="clinic_ans2">Пневмония с ДН</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="clinic_ans3" name="clinic" value="pnevm">
+                                    <label for="clinic_ans3">Пневмония без ДН</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="clinic_ans4" name="clinic" value="gastro">
+                                    <label for="clinic_ans4">Гастроинтерстициальная форма</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Осложненное течение заболевания</div>
+                            <div class="question__answer">
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="complications_ans1" name="complications" value="mvs">
+                                    <label for="complications_ans1">МВС</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="complications_ans2" name="complications" value="cns">
+                                    <label for="complications_ans2">Поражение ЦНС</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="complications_ans3" name="complications" value="ps">
+                                    <label for="complications_ans3">Поражение сердца</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="complications_ans4" name="complications" value="kss">
+                                    <label for="complications_ans4">Кожно-слизистый синдром</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="complications_ans5" name="complications" value="ords">
+                                    <label for="complications_ans5">ОРДС</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="complications_ans6" name="complications" value="sepsis">
+                                    <label for="complications_ans6">Сепсис</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="complications_ans7" name="complications" value="not">
+                                    <label for="complications_ans7">Отсутствует</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Степень поражения легких по данным КТ</div>
+                            <div class="question__answer">
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="kt_ans1" name="kt" value="kt1">
+                                    <label for="kt_ans1">КТ-1</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="kt_ans2" name="kt" value="kt2">
+                                    <label for="kt_ans2">КТ-2</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="kt_ans3" name="kt" value="kt3">
+                                    <label for="kt_ans3">КТ-3</label>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input type="radio" id="kt_ans4" name="kt" value="kt4">
+                                    <label for="kt_ans4">КТ-4</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="question__text question__text_align">Длительность вирусовыделения</div>
+                            <div class="question__answer">
+                                <input id="day_virus" class="value" placeholder="Введите длительность"></input>
+                            </div>
+                        </div>
+
+                        <div class="question question_last">
+                            <div class="question__text question__text_align">Наличие коморбидных заболеваний</div>
+                            <div class="question__answer question__answer_pad">
+                                <div class="check__wrapper">
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans1" name="comorbid" value="zhkt">
+                                        <label for="comorbid_ans1">ЖКТ</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans2" name="comorbid" value="immuno">
+                                        <label for="comorbid_ans2">Иммунодефицитные состояния</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans3" name="comorbid" value="nevr">
+                                        <label for="comorbid_ans3">Неврологические заболевания</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans4" name="comorbid" value="bronch">
+                                        <label for="comorbid_ans4">Бронхолегочная система</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans5" name="comorbid" value="allerg">
+                                        <label for="comorbid_ans5">Аллергические заболевания</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans6" name="comorbid" value="endokrin">
+                                        <label for="comorbid_ans6">Эндокринная патология</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans7" name="comorbid" value="autoimmun">
+                                        <label for="comorbid_ans7">Аутоиммунные заболевания</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans8" name="comorbid" value="onko">
+                                        <label for="comorbid_ans8">Онкогематология</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans9" name="comorbid" value="gen">
+                                        <label for="comorbid_ans9">Множественные пороки развития и генетика</label>
+                                    </div>
+                                    <div class="radio__wrapper">
+                                        <input type="checkbox" id="comorbid_ans10" name="comorbid" value="sss">
+                                        <label for="comorbid_ans10">Сердечно-сосудистая система</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary questionnaire__submit-btn" onclick="questionnaireSubmit()">Получить результат</button>
+                </div>
+            
+                <!-- Modal -->
+                <div class="modal modal__container" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Результат</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div id="modal__body" class="modal-body modal__body">
+                                ...
+                            </div>
+                            <div class="modal__footer">
+                                <button type="button" class="btn btn-secondary modal__btn-close" data-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer class="footer__container">
+        <div class="container">
+            <p class="float-left">Расчет волны активности
+            </p>
+            <p class="float-right">&copy ФБУН Центральный НИИ Эпидемиологии Роспотребнадзора</p>
+        </div>
+    </footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
