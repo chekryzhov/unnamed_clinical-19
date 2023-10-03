@@ -226,7 +226,7 @@ footer {
 
 .value {
     /* margin-top: 10px; */
-    text-align: center;
+    text-align: left;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.33;
@@ -349,10 +349,13 @@ input[type="radio"] {
 .question__answer {
     width: 50%;
     padding: 5px;
+    padding-left: 20px;
     display: flex;
+    flex-direction: column;
     text-align: center;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -451,4 +454,8 @@ input[type="radio"] {
 .questionnaire__link:hover {
     color: #e87722;
     text-decoration: none;
+}
+
+.kt {
+    display: none;
 }
