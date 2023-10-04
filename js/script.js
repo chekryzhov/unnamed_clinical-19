@@ -54,22 +54,17 @@ function age_group(age) {
 
 const mark = {
     1: {
-        age : { 
-            1: {wave : {1 : 3, 2 : 2, 3 : 2, 4 : 2, 5 : 5,} },
-        },
+        age : { 1: {wave : {1 : 3, 2 : 2, 3 : 2, 4 : 2, 5 : 5,} },},
         sex : {
             male : {wave : {1 : 1, 2 : 1, 3 : 1, 4 : 1, 5 : 1}}, 
-            female : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}
-        },
+            female : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
         anamnes : {
             1 : {wave : {1 : 1, 2 : 1, 3 : 1, 4 : 1, 5 : 0,}}, 
-            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 1, }}
-        },
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 1, }}},
         duration_disease : { 
             1 : { wave : { 1 : 2, 2 : 2, 3 : 2, 4 : 2, 5 : 2, } }, 
             2 : { wave : { 1 : 1, 2 : 1, 3 : 1, 4 : 1, 5 : 1, } }, 
-            3 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}
-        },
+            3 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
         comorbid : {
             zhkt : {wave : {1 : 5, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
             immuno : {wave : {1 : 3, 2 : 2, 3 : 0, 4 : 4, 5 : 0,}},
@@ -80,22 +75,18 @@ const mark = {
             autoimmun : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
             onko : {wave : {1 : 0, 2 : 0, 3 : 2, 4 : 0, 5 : 0,}},
             gen : {wave : {1 : 0, 2 : 3, 3 : 3, 4 : 0, 5 : 0,}},
-            sss : {wave : {1 : 4, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}
-        },
+            sss : {wave : {1 : 4, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}},
         clinic : {
             orvi : {wave : {1 : 0, 2 : 4, 3 : 4, 4 : 4, 5 : 4,}},
-            // pnevm_DN : {wave : {1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0,}},
             pnevm : {wave : {1 : 0, 2 : 3, 3 : 3, 4 : 2, 5 : 2,}},
             gastro : {wave : {1 : 0, 2 : 2, 3 : 2, 4 : 3, 5 : 3,}},
             kozh : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
             ssf : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-        },
+            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},},
         complications : {
             dn1 : {wave : {1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0,}},
             dn2 : {wave : {1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0,}},
             dn3 : {wave : {1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0,}},
-            // mvs : {wave : {1 : 0,2 : 4,3 : 0,4 : 0,5 : 0,}},
             cns : {wave : {1 : 0,2 : 0,3 : 5,4 : 5,5 : 0,}},
             ps : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             kss : {wave : {1 : 0,2 : 5,3 : 0,4 : 4,5 : 5,}},
@@ -104,27 +95,34 @@ const mark = {
             s_shock : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             pn : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             bo : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-        },
+            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},},
         mvs : {
             1 : {wave : {1 : 0,2 : 4,3 : 0,4 : 0,5 : 0,}}, 
-            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}
-        },
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
         kt : {
             kt1 : {wave : {1 : 0,2 : 1,3 : 1,4 : 0,5 : 0,}},
             kt2 : {wave : {1 : 1,2 : 0,3 : 0,4 : 1,5 : 0,}},
             kt3 : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-            kt4 : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            kt4 : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         duration_virus : {
             1 : {wave : {1 : 0,2 : 0,3 : 0,4 : 2,5 : 0,}},
             2 : {wave : {1 : 1,2 : 1,3 : 1,4 : 1,5 : 2,}},
-            3 : {wave : {1 : 2,2 : 2,3 : 2,4 : 0,5 : 1,}}
-        },
+            3 : {wave : {1 : 2,2 : 2,3 : 2,4 : 0,5 : 1,}}},
+        srb : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 1, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        dimer : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        form : {
+            0 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}, 
+            1 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }},
+            2 : {wave : {1 : 0, 2 : 2, 3 : 2, 4 : 2, 5 : 2,}}, 
+            3 : { wave : { 1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0, }},
+            4 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}},
     }, 
     2: {
-        age : {
-            2: {wave : {1 : 1,2 : 1,3 : 1,4 : 1,5 : 4,}},},
+        age : {2: {wave : {1 : 1,2 : 1,3 : 1,4 : 1,5 : 4,}},},
         sex : {
             male : {wave : {1 : 1,2 : 1,3 : 1,4 : 1,5 : 1,}},
             female : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}},
@@ -134,8 +132,7 @@ const mark = {
         duration_disease : {
             1 : {wave : {1 : 2,2 : 2,3 : 2,4 : 2,5 : 2,}},
             2 : {wave : {1 : 1,2 : 1,3 : 1,4 : 1,5 : 1,}},
-            3 : {wave : {1 : 0,2 : 0,3 : 0,4 : 1,5 : 0,}}
-        },
+            3 : {wave : {1 : 0,2 : 0,3 : 0,4 : 1,5 : 0,}}},
         comorbid : {
             zhkt : {wave : {1 : 4,2 : 0,3 : 0,4 : 0,5 : 0,}},
             immuno : {wave : {1 : 3,2 : 3,3 : 0,4 : 0,5 : 0,}},
@@ -146,22 +143,18 @@ const mark = {
             autoimmun : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             onko : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             gen : {wave : {1 : 0,2 : 2,3 : 0,4 : 2,5 : 0,}},
-            sss : {wave : {1 : 3,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            sss : {wave : {1 : 3,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         clinic : {
             orvi : {wave : {1 : 0,2 : 4,3 : 4,4 : 4,5 : 4,}},
-            // pnevm_DN : {wave : {1 : 0,2 : 1,3 : 0,4 : 1,5 : 2,}},
             pnevm : {wave : {1 : 0,2 : 3,3 : 3,4 : 3,5 : 1,}},
             gastro : {wave : {1 : 0,2 : 2,3 : 2,4 : 2,5 : 3,}},
             kozh : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
             ssf : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-        },
+            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},},
         complications : {
             dn1 : {wave : {1 : 0,2 : 3,3 : 3,4 : 3,5 : 1,}},
             dn2 : {wave : {1 : 0,2 : 3,3 : 3,4 : 3,5 : 1,}},
             dn3 : {wave : {1 : 0,2 : 3,3 : 3,4 : 3,5 : 1,}},
-            // mvs : {wave : {1 : 0,2 : 5,3 : 0,4 : 0,5 : 0,}},
             cns : {wave : {1 : 0,2 : 0,3 : 0,4 : 5,5 : 0,}},
             ps : {wave : {1 : 0,2 : 0,3 : 0,4 : 3,5 : 0,}},
             kss : {wave : {1 : 0,2 : 5,3 : 5,4 : 3,5 : 5,}},
@@ -170,41 +163,44 @@ const mark = {
             s_shock : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             pn : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             bo : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         mvs : {
             1 : {wave : {1 : 0,2 : 5,3 : 0,4 : 0,5 : 0,}}, 
-            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}
-        },
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
         kt : {
             kt1 : {wave : {1 : 0,2 : 3,3 : 0,4 : 3,5 : 0,}},
             kt2 : {wave : {1 : 0,2 : 3,3 : 0,4 : 0,5 : 0,}},
             kt3 : {wave : {1 : 0,2 : 0,3 : 0,4 : 3,5 : 0,}},
-            kt4 : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            kt4 : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         duration_virus : {
             1 : {wave : {1 : 0,2 : 1,3 : 1,4 : 3,5 : 1,}},
             2 : {wave : {1 : 2,2 : 2,3 : 2,4 : 2,5 : 3,}},
-            3 : {wave : {1 : 3,2 : 3,3 : 3,4 : 1,5 : 2,}}
-        },
+            3 : {wave : {1 : 3,2 : 3,3 : 3,4 : 1,5 : 2,}}},
+        srb : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 1, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        dimer : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        form : {
+            0 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}, 
+            1 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }},
+            2 : {wave : {1 : 0, 2 : 2, 3 : 2, 4 : 2, 5 : 2,}}, 
+            3 : { wave : { 1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0, }},
+            4 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}},
     },
     3: {
-        age : {
-            3: {wave : {1 : 2,2 : 3,3 : 2,4 : 2,5 : 2,}},
-        },
+        age : {3: {wave : {1 : 2,2 : 3,3 : 2,4 : 2,5 : 2,}},},
         sex : {
             male : {wave : {1 : 1,2 : 1,3 : 0,4 : 1,5 : 1,}},
-            female : {wave : {1 : 0,2 : 1,3 : 1,4 : 0,5 : 0,}}
-        },
+            female : {wave : {1 : 0,2 : 1,3 : 1,4 : 0,5 : 0,}}},
         anamnes : {
             1 : {wave : {1 : 1,2 : 1,3 : 0,4 : 1,5 : 0,}},
-            0 : {wave : {1 : 0,2 : 0,3 : 1,4 : 0,5 : 1,}}
-        },
+            0 : {wave : {1 : 0,2 : 0,3 : 1,4 : 0,5 : 1,}}},
         duration_disease : {
             1 : {wave : {1 : 2,2 : 2,3 : 2,4 : 2,5 : 2,}},
             2 : {wave : {1 : 1,2 : 1,3 : 1,4 : 1,5 : 1,}},
-            3 : {wave : {1 : 0,2 : 0,3 : 0,4 : 1,5 : 0,}}
-        },
+            3 : {wave : {1 : 0,2 : 0,3 : 0,4 : 1,5 : 0,}}},
         comorbid : {
             zhkt : {wave : {1 : 4,2 : 0,3 : 0,4 : 0,5 : 0,}},
             immuno : {wave : {1 : 3,2 : 0,3 : 3,4 : 0,5 : 0,}},
@@ -215,22 +211,18 @@ const mark = {
             autoimmun : {wave : {1 : 1,2 : 0,3 : 0,4 : 0,5 : 0,}},
             onko : {wave : {1 : 0,2 : 3,3 : 2,4 : 3,5 : 0,}},
             gen : {wave : {1 : 0,2 : 3,3 : 2,4 : 0,5 : 0,}},
-            sss : {wave : {1 : 2,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            sss : {wave : {1 : 2,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         clinic : {
             orvi : {wave : {1 : 0,2 : 4,3 : 4,4 : 4,5 : 4,}},
-            // pnevm_DN : {wave : {1 : 0,2 : 1,3 : 1,4 : 1,5 : 0,}},
             pnevm : {wave : {1 : 0,2 : 3,3 : 2,4 : 3,5 : 0,}},
             gastro : {wave : {1 : 0,2 : 2,3 : 3,4 : 2,5 : 3,}},
             kozh : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
             ssf : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-        },
+            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},},
         complications : {
             dn1 : {wave : {1 : 0,2 : 1,3 : 1,4 : 1,5 : 0,}},
             dn2 : {wave : {1 : 0,2 : 1,3 : 1,4 : 1,5 : 0,}},
             dn3 : {wave : {1 : 0,2 : 1,3 : 1,4 : 1,5 : 0,}},
-            // mvs : {wave : {1 : 0,2 : 5,3 : 4,4 : 0,5 : 0,}},
             cns : {wave : {1 : 0,2 : 4,3 : 4,4 : 0,5 : 0,}},
             ps : {wave : {1 : 0,2 : 3,3 : 0,4 : 4,5 : 0,}},
             kss : {wave : {1 : 0,2 : 4,3 : 5,4 : 5,5 : 5,}},
@@ -239,41 +231,44 @@ const mark = {
             s_shock : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             pn : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             bo : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         mvs : {
             1 : {wave : {1 : 0,2 : 5,3 : 4,4 : 0,5 : 0,}}, 
-            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}
-        },
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
         kt : {
             kt1 : {wave : {1 : 3,2 : 3,3 : 3,4 : 3,5 : 0,}},
             kt2 : {wave : {1 : 0,2 : 1,3 : 0,4 : 2,5 : 0,}},
             kt3 : {wave : {1 : 0,2 : 2,3 : 2,4 : 1,5 : 0,}},
-            kt4 : {wave : {1 : 0,2 : 0,3 : 0,4 : 1,5 : 0,}}
-        },
+            kt4 : {wave : {1 : 0,2 : 0,3 : 0,4 : 1,5 : 0,}}},
         duration_virus : {
             1 : {wave : {1 : 1,2 : 3,3 : 1,4 : 3,5 : 2,}},
             2 : {wave : {1 : 2,2 : 2,3 : 2,4 : 1,5 : 3,}},
-            3 : {wave : {1 : 3,2 : 1,3 : 3,4 : 2,5 : 2,}}
-        },
+            3 : {wave : {1 : 3,2 : 1,3 : 3,4 : 2,5 : 2,}}},
+        srb : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 1, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        dimer : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        form : {
+            0 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}, 
+            1 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }},
+            2 : {wave : {1 : 0, 2 : 2, 3 : 2, 4 : 2, 5 : 2,}}, 
+            3 : { wave : { 1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0, }},
+            4 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}},
     },
     4: {
-        age : {
-            4: {wave : {1 : 5,2 : 4,3 : 4,4 : 4,5 : 3,}},
-        },
+        age : {4: {wave : {1 : 5,2 : 4,3 : 4,4 : 4,5 : 3,}},},
         sex : {
             male : {wave : {1 : 1,2 : 1,3 : 0,4 : 0,5 : 1,}},
-            female : {wave : {1 : 0,2 : 0,3 : 1,4 : 1,5 : 0,}}
-        },
+            female : {wave : {1 : 0,2 : 0,3 : 1,4 : 1,5 : 0,}}},
         anamnes : {
             1 : {wave : {1 : 1,2 : 1,3 : 1,4 : 1,5 : 0,}},
-            0 : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 1,}}
-        },
+            0 : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 1,}}},
         duration_disease : {
             1 : {wave : {1 : 2,2 : 2,3 : 2,4 : 2,5 : 0,}},
             2 : {wave : {1 : 0,2 : 0,3 : 1,4 : 1,5 : 2,}},
-            3 : {wave : {1 : 1,2 : 1,3 : 0,4 : 0,5 : 1,}}
-        },
+            3 : {wave : {1 : 1,2 : 1,3 : 0,4 : 0,5 : 1,}}},
         comorbid : {
             zhkt : {wave : {1 : 5,2 : 0,3 : 0,4 : 0,5 : 0,}},
             immuno : {wave : {1 : 5,2 : 0,3 : 0,4 : 2,5 : 0,}},
@@ -284,22 +279,18 @@ const mark = {
             autoimmun : {wave : {1 : 2,2 : 0,3 : 0,4 : 0,5 : 0,}},
             onko : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             gen : {wave : {1 : 0,2 : 2,3 : 2,4 : 0,5 : 0,}},
-            sss : {wave : {1 : 4,2 : 0,3 : 0,4 : 0,5 : 0,}},
-        },
+            sss : {wave : {1 : 4,2 : 0,3 : 0,4 : 0,5 : 0,}},},
         clinic : {
             orvi : {wave : {1 : 0,2 : 4,3 : 4,4 : 4,5 : 4,}},
-            // pnevm_DN : {wave : {1 : 0,2 : 1,3 : 1,4 : 0,5 : 2,}},
             pnevm : {wave : {1 : 0,2 : 3,3 : 3,4 : 3,5 : 2,}},
             gastro : {wave : {1 : 0,2 : 2,3 : 2,4 : 2,5 : 3,}},
             kozh : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
             ssf : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
-        },
+            cereb : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},},
         complications : {
             dn1 : {wave : {1 : 0,2 : 1,3 : 1,4 : 0,5 : 2,}},
             dn2 : {wave : {1 : 0,2 : 1,3 : 1,4 : 0,5 : 2,}},
             dn3 : {wave : {1 : 0,2 : 1,3 : 1,4 : 0,5 : 2,}},
-            // mvs : {wave : {1 : 0,2 : 5,3 : 0,4 : 3,5 : 0,}},
             cns : {wave : {1 : 0,2 : 4,3 : 4,4 : 0,5 : 0,}},
             ps : {wave : {1 : 0,2 : 1,3 : 0,4 : 0,5 : 0,}},
             kss : {wave : {1 : 0,2 : 3,3 : 5,4 : 4,5 : 5,}},
@@ -308,41 +299,44 @@ const mark = {
             s_shock : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             pn : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             bo : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         mvs : {
             1 : {wave : {1 : 0,2 : 5,3 : 0,4 : 3,5 : 0,}}, 
-            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}
-        },
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
         kt : {
             kt1 : {wave : {1 : 3,2 : 3,3 : 3,4 : 3,5 : 0,}},
             kt2 : {wave : {1 : 2,2 : 2,3 : 2,4 : 2,5 : 0,}},
             kt3 : {wave : {1 : 2,2 : 1,3 : 1,4 : 1,5 : 0,}},
-            kt4 : {wave : {1 : 0,2 : 0,3 : 0.5,4 : 0.5,5 : 0,}}
-        },
+            kt4 : {wave : {1 : 0,2 : 0,3 : 0.5,4 : 0.5,5 : 0,}}},
         duration_virus : {
             1 : {wave : {1 : 1,2 : 1,3 : 1,4 : 3,5 : 1,}},
             2 : {wave : {1 : 2,2 : 3,3 : 2,4 : 2,5 : 3,}},
-            3 : {wave : {1 : 3,2 : 2,3 : 3,4 : 1,5 : 2,}}
-        },
+            3 : {wave : {1 : 3,2 : 2,3 : 3,4 : 1,5 : 2,}}},
+        srb : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 1, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        dimer : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        form : {
+            0 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}, 
+            1 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }},
+            2 : {wave : {1 : 0, 2 : 2, 3 : 2, 4 : 2, 5 : 2,}}, 
+            3 : { wave : { 1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0, }},
+            4 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}},
     },
     5: {
-        age : {
-            5: {wave : {1 : 4,2 : 5,3 : 5,4 : 5,5 : 2,}}
-        },
+        age : {5: {wave : {1 : 4,2 : 5,3 : 5,4 : 5,5 : 2,}}},
         sex : {
             male : {wave : {1 : 0,2 : 0,3 : 1,4 : 0,5 : 0,}},
-            female : {wave : {1 : 1,2 : 1,3 : 0,4 : 1,5 : 1,}}
-        },
+            female : {wave : {1 : 1,2 : 1,3 : 0,4 : 1,5 : 1,}}},
         anamnes : {
             1 : {wave : {1 : 1,2 : 1,3 : 1,4 : 0,5 : 0,}},
-            0 : {wave : {1 : 0,2 : 0,3 : 1,4 : 1,5 : 1,}}
-        },
+            0 : {wave : {1 : 0,2 : 0,3 : 1,4 : 1,5 : 1,}}},
         duration_disease : {
             1 : {wave : {1 : 0,2 : 0,3 : 1,4 : 2,5 : 2,}},
             2 : {wave : {1 : 2,2 : 1,3 : 2,4 : 1,5 : 0,}},
-            3 : {wave : {1 : 1,2 : 2,3 : 0,4 : 0,5 : 1,}}
-        },
+            3 : {wave : {1 : 1,2 : 2,3 : 0,4 : 0,5 : 1,}}},
         comorbid : {
             zhkt : {wave : {1 : 3,2 : 0,3 : 0,4 : 0,5 : 0,}},
             immuno : {wave : {1 : 4,2 : 1,3 : 0,4 : 1,5 : 0,}},
@@ -353,11 +347,9 @@ const mark = {
             autoimmun : {wave : {1 : 0.5,2 : 0,3 : 0,4 : 0,5 : 0,}},
             onko : {wave : {1 : 0,2 : 1,3 : 2,4 : 2,5 : 0,}},
             gen : {wave : {1 : 0,2 : 2,3 : 1,4 : 1,5 : 0,}},
-            sss : {wave : {1 : 2,2 : 0,3 : 0,4 : 0,5 : 0,}}
-        },
+            sss : {wave : {1 : 2,2 : 0,3 : 0,4 : 0,5 : 0,}}},
         clinic : {
             orvi : {wave : {1 : 0,2 : 4,3 : 4,4 : 4,5 : 4,}},
-            // pnevm_DN : {wave : {1 : 0,2 : 2,3 : 2,4 : 1,5 : 2,}},
             pnevm : {wave : {1 : 0,2 : 3,3 : 3,4 : 3,5 : 2,}},
             gastro : {wave : {1 : 0,2 : 2,3 : 1,4 : 2,5 : 3,}},
             kozh : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}},
@@ -368,7 +360,6 @@ const mark = {
             dn1 : {wave : {1 : 0,2 : 2,3 : 2,4 : 1,5 : 2,}},
             dn2 : {wave : {1 : 0,2 : 2,3 : 2,4 : 1,5 : 2,}},
             dn3 : {wave : {1 : 0,2 : 2,3 : 2,4 : 1,5 : 2,}},
-            // mvs : {wave : {1 : 0,2 : 3,3 : 0,4 : 0,5 : 0,}},
             cns : {wave : {1 : 0,2 : 5,3 : 5,4 : 0,5 : 0,}},
             ps : {wave : {1 : 0,2 : 0,3 : 2,4 : 5,5 : 0,}},
             kss : {wave : {1 : 0,2 : 3,3 : 4,4 : 5,5 : 0,}},
@@ -377,23 +368,31 @@ const mark = {
             s_shock : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             pn : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
             bo : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},
-        },
+            not : {wave : {1 : 0,2 : 0,3 : 0,4 : 0,5 : 0,}},},
         mvs : {
             1 : {wave : {1 : 0,2 : 3,3 : 0,4 : 0,5 : 0,}}, 
-            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}
-        },
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
         kt : {
             kt1 : {wave : {1 : 3,2 : 3,3 : 3,4 : 3,5 : 0,}},
             kt2 : {wave : {1 : 2,2 : 2,3 : 2,4 : 2,5 : 0,}},
             kt3 : {wave : {1 : 2,2 : 2,3 : 1,4 : 1,5 : 0,}},
-            kt4 : {wave : {1 : 0,2 : 1,3 : 0.5,4 : 0.5,5 : 0,}}
-        },
+            kt4 : {wave : {1 : 0,2 : 1,3 : 0.5,4 : 0.5,5 : 0,}}},
         duration_virus : {
             1 : {wave : {1 : 1,2 : 1,3 : 1,4 : 3,5 : 1,}},
             2 : {wave : {1 : 2,2 : 2,3 : 2,4 : 2,5 : 3,}},
-            3 : {wave : {1 : 3,2 : 3,3 : 3,4 : 1,5 : 2,}}
-        },
+            3 : {wave : {1 : 3,2 : 3,3 : 3,4 : 1,5 : 2,}}},
+        srb : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 1, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        dimer : {
+            1 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 1, 5 : 1,}}, 
+            0 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }}},
+        form : {
+            0 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}, 
+            1 : { wave : { 1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0, }},
+            2 : {wave : {1 : 0, 2 : 2, 3 : 2, 4 : 2, 5 : 2,}}, 
+            3 : { wave : { 1 : 0, 2 : 1, 3 : 1, 4 : 1, 5 : 0, }},
+            4 : {wave : {1 : 0, 2 : 0, 3 : 0, 4 : 0, 5 : 0,}}},
     },
 }
 
@@ -421,16 +420,13 @@ without_kt.forEach(el => {
 });
 
 function questionnaireSubmit() {
-    let age, sex, anamnes, duration_disease, duration_disease_check, comorbid, kt, duration_virus, duration_virus_check, clinic, complications, group, mvs;
+    let age, sex, anamnes, duration_disease, duration_disease_check, comorbid, kt, duration_virus, duration_virus_check, clinic, complications, group, mvs, srb, dimer, form, dimer_check, srb_check;
 
     if (document.querySelector('#age').value == '' || document.querySelector('input[name="sex"]:checked') == null) {
         let conclusion = 'Заполните все поля';
-
         let resultModal = document.getElementById("modal__body");
         resultModal.innerText = conclusion;
-
         fadeIn(modal,500);
-
     } else {
         age = document.querySelector('#age').value;
         sex = document.querySelector('input[name="sex"]:checked').value;
@@ -439,6 +435,9 @@ function questionnaireSubmit() {
         clinic = document.querySelector('input[name="clinic"]:checked').value;
         complications = document.querySelector('input[name="complications"]:checked').value;
         mvs = document.querySelector('input[name="mvs"]:checked').value;
+        srb = document.querySelector('#srb').value.replace(',', ".");
+        dimer = document.querySelector('#d-dimer').value.replace(',', ".");
+        form = document.querySelector('input[name="form"]:checked').value;
 
         if (clinic == 'pnevm') {
             kt = document.querySelector('input[name="kt"]:checked').value;
@@ -463,6 +462,18 @@ function questionnaireSubmit() {
             duration_virus_check = 3;
         }
 
+        if (srb > 5) {
+            srb_check = 1;
+        } else {
+            srb_check = 0;
+        }
+
+        if (dimer > 500) {
+            dimer_check = 1;
+        } else {
+            dimer_check = 0;
+        }
+
         let comorbid_array = [];
         for (i = 0; i < comorbid.length; i++) {
             if (comorbid[i].checked) {
@@ -471,7 +482,6 @@ function questionnaireSubmit() {
         }
 
         group = age_group(age); 
-
         let wave_result = [0, 0, 0, 0, 0];
 
         for (i = 1; i <= wave_result.length; i++) {
@@ -484,21 +494,23 @@ function questionnaireSubmit() {
             }
             wave_result[i - 1] += mark[group]["clinic"][clinic]["wave"][i];
             wave_result[i - 1] += mark[group]["complications"][complications]["wave"][i];
+
             if ((complications.includes('dn')) && (clinic == 'pnevm')) {
                 wave_result[i - 1] -= mark[group]["clinic"]["pnevm"]["wave"][i];
-                console.log('-');
             }
             wave_result[i - 1] += mark[group]["mvs"][mvs]["wave"][i];
+
             if (clinic == 'pnevm') {
                 wave_result[i - 1] += mark[group]["kt"][kt]["wave"][i];
             }
             wave_result[i - 1] += mark[group]["duration_virus"][duration_virus_check]["wave"][i];
+            wave_result[i - 1] += mark[group]["srb"][srb_check]["wave"][i];
+            wave_result[i - 1] += mark[group]["dimer"][dimer_check]["wave"][i];
+            wave_result[i - 1] += mark[group]["form"][form]["wave"][i];
         }
 
         max_wave = Math.max(...wave_result);
-
         count_max_waves = wave_result.filter(i=>i==max_wave).length;
-
         wave = '';
 
         if (count_max_waves > 1) {
@@ -511,12 +523,8 @@ function questionnaireSubmit() {
         }
 
         let conclusion = 'Данный пациент относится к ' + wave + ' волне(-ам)';
-
         let resultModal = document.getElementById("modal__body");
         resultModal.innerText = conclusion;
-
-        console.log(wave_result);
-
         fadeIn(modal,500);
     }
 }
